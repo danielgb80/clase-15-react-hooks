@@ -1,15 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Loading from './components/Loading'
+import AppRouter from './routers/AppRouter'
+import { NavLink } from 'react-router-dom'
 
 function App() {
 
   return (
     <>
-      <h1 className='text-primary'>
-        Click on the Vite and React logos to learn more
-      </h1>
+    <ul>
+        <li><NavLink to="/home">Home</NavLink></li>
+        <li><NavLink to="/agregar">Agregar</NavLink></li>
+        <li><NavLink to="/listado">Listado</NavLink></li>
+      </ul>
+      <AppRouter/>
     </>
   )
 }
